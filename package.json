@@ -1,0 +1,60 @@
+{
+  "name": "typescript-graphql-prisma-boilerplate",
+  "version": "0.1.0",
+  "description": "A boilerplate for building production-ready GraphQL APIs using Typescript and Prisma2",
+  "main": "index.js",
+  "repository": "https://github.com/lmjcbs/typescript-graphql-prisma-boilerplate.git",
+  "author": "Liam Jacobs",
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "graphql",
+    "prisma",
+    "boilerplate",
+    "api",
+    "eslint",
+    "prettier"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon dist/index.js",
+    "gen-env": "gen-env-types .env -o src/env.d.ts -e .",
+    "lint": "eslint '*/**/*.ts'",
+    "lint-and-fix": "eslint '*/**/*.ts' --fix",
+    "start": "node dist/index.js",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@prisma/client": "2.6.0",
+    "argon2": "^0.26.2",
+    "cors": "^2.8.5",
+    "dataloader": "^2.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^15.3.0",
+    "nodemailer": "^6.4.11",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.0.0-rc.3",
+    "winston": "^3.3.3",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "@prisma/cli": "2.6.0",
+    "@types/connect-redis": "^0.0.14",
+    "@types/cors": "^2.8.7",
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.27",
+    "@types/nodemailer": "^6.4.0",
+    "@types/yup": "^0.29.7",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-typescript": "^10.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "gen-env-types": "^1.0.3",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}
