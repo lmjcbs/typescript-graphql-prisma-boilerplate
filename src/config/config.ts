@@ -4,13 +4,14 @@ import * as Yup from 'yup';
 
 dotenv.config({ path: path.join(__dirname, '../../.env') });
 
+// Define environment variables schema and validations
 const envVarsSchema = Yup.object().shape({
   NODE_ENV: Yup.string().required().oneOf(['development', 'test', 'production']),
   PORT: Yup.number().required().default(3000),
 });
 
 envVarsSchema.validate(process.env).catch((err: Error) => {
-  console.error(`Config ${err.name}: ${err.message}`);
+  throw new Error(err.message);
 });
 
 export const config = {
